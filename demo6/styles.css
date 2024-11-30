@@ -1,5 +1,93 @@
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: black;
+@media only screen and (min-width: 600px) {
+  * {
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
   }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+
+  .parent {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    gap: 1rem;
+    grid-template-columns: 35% 30% 35%;
+    grid-template-rows: 30% 20% 20% 30%;
+  }
+
+  .child {
+    border: 1px;
+    border-style: solid;
+  }
+
+  .box1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .box2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .box3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  .box4 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .box5 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .box6 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.parent {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.child {
+  border: 1px;
+  border-style: solid;
 }
