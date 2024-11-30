@@ -1,0 +1,50 @@
+/* Add animation keyframes */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Sidebar transition */
+.details-left {
+    position: fixed;
+    top: 50px; /* Below the navbar */
+    left: 0;
+    width: 20%;
+    height: 100vh;
+    background-color: #e9ecef;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 2px solid #ddd;
+    overflow-y: auto;
+
+    /* Add animation */
+    animation: slideInLeft 1s ease-out;
+}
+
+/* Main Content transition */
+.main-content {
+    margin-left: 20%; /* Shift the content to the right */
+    padding: 20px;
+    width: 80%;
+    padding-top: 60px;
+
+    /* Add animation */
+    animation: slideInUp 1s ease-out;
+}
