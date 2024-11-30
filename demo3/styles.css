@@ -1,0 +1,36 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%; 
+    background-color: lightblue;
+  }
+  
+  .img {
+    flex: 1;
+    margin: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    border: 2px solid black;
+    height: 75%;
+  }
+  
+  .img img {
+    max-height: 100%;
+    max-width: 80%;
+    object-fit: fill;
+  } */

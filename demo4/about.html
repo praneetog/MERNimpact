@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Lionel Messi</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            padding: 5px 10px;
+        }
+
+        /* Left Panel */
+        .details-left {
+            position: fixed;
+            top: 50px; /* Below the navbar */
+            left: 0;
+            width: 20%;
+            height: 100vh;
+            background-color: #e9ecef;
+            padding: 20px;
+            box-sizing: border-box;
+            border-right: 2px solid #ddd;
+            overflow-y: auto;
+        }
+
+        .details-left h2 {
+            margin-top: 0;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 20%; /* Shift the content to the right */
+            padding: 20px;
+            width: 80%;
+            padding-top: 60px;
+        }
+
+        .main-content h1 {
+            margin-top: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Lionel Messi</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+        </ul>
+    </nav>
+
+    <!-- Fixed Left Panel -->
+    <div class="details-left">
+        <p><strong>Name:</strong> Lionel Messi</p>
+        <p><strong>Age:</strong> 37</p>
+        <p><strong>Birthplace:</strong> Rosario, Argentina</p>
+        <p><strong>Nationality:</strong> Argentine</p>
+        <p><strong>Position:</strong> Forward</p>
+        <p><strong>Clubs:</strong> Barcelona, Paris Saint-Germain, Inter Miami</p>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <h1>About Lionel Messi</h1>
+        <div style="display: flex; gap: 15px;">
+            <img src="https://shorturl.at/h5I10" alt="">
+            <p>Lionel Messi, born on June 24, 1987, is an Argentine professional footballer who plays as a forward. Widely regarded as one of the greatest players in football history, Messi has a record seven Ballon d'Or awards. Known for his incredible dribbling skills, vision, and goal-scoring ability, Messi has spent the majority of his career with FC Barcelona and later moved to Paris Saint-Germain.</p>
+        </div>
+        
+        
+    </div>
+</body>
+</html>
