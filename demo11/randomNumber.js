@@ -1,2 +1,2 @@
-let randomNumber = ((Math.random())*50).toFixed(1)
+let randomNumber = (((Math.random())*50 + 50).toFixed(0))
 console.log(randomNumber)
