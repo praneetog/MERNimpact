@@ -15,5 +15,21 @@ let k = 0;
 do {
     console.log(k);
     k++;
+} while(k<10);
+
+//For in loop
+let obj = {a: 1, b: 2, c: 3};
+for(let key in obj) {
+    console.log(key, obj[key]);
 }
-while(k<10);
+
+//For of loop
+let arr = [1, 2, 3];
+for(let val of arr) {
+    console.log(val);
+}
+
+//For each loop
+arr.forEach((val) => {
+    console.log(val);
+});
