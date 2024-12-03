@@ -22,7 +22,7 @@ console.log(arr)
 
 // 5. Splice
 // Adds and/or removes elements from an array
-arr.splice(2, 0, 2.5)
+arr.splice(2, 1, 2.5)
 console.log(arr)
 
 // 6. Slice
