@@ -8,3 +8,7 @@ btn.addEventListener("click", () => {
     parent.style.backgroundColor = "white";
   }
 });
+
+btn.addEventListener("mouseenter", () => {
+    parent.style.backgroundColor = "pink";
+});
