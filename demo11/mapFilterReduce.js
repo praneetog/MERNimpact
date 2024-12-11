@@ -17,3 +17,7 @@ let sum = arr3.reduce((acc, curr) => {
     return acc + curr
 }, 0)
 console.log(sum)
+
+let arr4 = [1,2,3,4,5,6,7,8,9,10]
+let prdct = arr4.map((i) => { return i**i }).filter((i) => { return i > Math.floor((Math.random()*15)) }).reduce((acc, curr) => { return acc * curr }, 1)
+console.log(prdct)
