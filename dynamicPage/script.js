@@ -13,7 +13,7 @@ function createCards(filteredItems) {
   filteredItems.forEach((item) => {
     const cardHTML = `
       <div class="card">
-        <img src="https://shorturl.at/FRqvc" alt="${item.name}" style="width: 100%; border-radius: 8px 8px 0 0;">
+        <img src=${item.link} alt="${item.name}" style="width: 100%; border-radius: 8px 8px 0 0;">
         <h3>${item.name}</h3>
         <p>Category: ${item.category}</p>
         <p class="price">Rs. ${item.price}</p>

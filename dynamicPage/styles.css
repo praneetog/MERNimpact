@@ -9,6 +9,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 2px 20px;
+    align-items: center;
 }
 
 footer{
@@ -28,7 +29,7 @@ footer{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     gap: 20px;
-    width: 1410px;
+    width: 93%;
     margin: 20px;
   }
   .card {
