@@ -17,6 +17,10 @@ function createCards(filteredItems) {
         <h3>${item.name}</h3>
         <p>Category: ${item.category}</p>
         <p class="price">Rs. ${item.price}</p>
+        <div>
+          <button class="addToCart" class="btn">Add to Cart</button>
+          <button class="buyNow" style="" class="btn">Buy Now</button>
+        </div>
       </div>
     `;
     cardContainer.innerHTML += cardHTML;
@@ -25,7 +29,6 @@ function createCards(filteredItems) {
 
 dropdown.addEventListener("change", () => {
     const selectedCategory = dropdown.value;
-    console.log(selectedCategory);
     if (selectedCategory === 'All') {
       createCards(items);
     } else {
