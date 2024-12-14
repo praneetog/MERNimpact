@@ -1,10 +1,6 @@
 import { items } from './api.js';
 
 const dropdown = document.querySelector("select");
-const all = document.getElementById("all");
-const electronics = document.getElementById("electronics");
-const fashion = document.getElementById("fashion");
-const homeItems = document.getElementById("homeItems");
 const cardContainer = document.getElementById('cardContainer');
 
 // Function to create cards based on filtered items
