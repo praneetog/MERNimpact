@@ -14,11 +14,11 @@ const app = http.createServer((req, res)=>{
     //     res.end("Welcome to the about page")
     // }else if(req.url == "/contact"){
     //     res.write("Welcome to the contact page")
-    //     res.end()
-    // }else{
-    //     res.end("404 page not found")
-    // }
-    // const currentDateTime = new Date().toISOString();
+//         res.end()
+//     }else{
+//         res.end("404 page not found")
+//     }
+//     const currentDateTime = new Date().toISOString();
 //     const logEntry = [${currentDateTime}] Request received: ${req.method} ${req.url}\n;
 //     const logFilePath = path.join(__dirname, 'log.txt');
 //     fs.appendFile(logFilePath, logEntry, (err) => {
