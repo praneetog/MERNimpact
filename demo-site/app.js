@@ -117,38 +117,36 @@ const app5 = ()=>{
 
 const app6 = ()=>{
     const homepage = path.join("public/index.html")
-    const style = path.join("public/styles.css")
+    
     const server = http.createServer((req,res)=>{
-        console.log(req.url)
+        let parsedUrl = url.parse(req.url,true);
         if(req.url==="/"){
             fs.readFile(homepage,"utf-8",(err,data)=>{
                 if(err){
                     console.log(err);
                 }
                 else{
-                    // res.end(data);
                     res.write(data);
                     res.end();
-                    
-                }
-            })
-        } else if(req.url==="/styles.css"){
-            fs.readFile(style,"utf-8",(err,data)=>{
-                if(err){
-                    console.log(err);
-                }
-                else{
                     // res.end(data);
-                    res.write(data);
-                    res.end();
-                    
                 }
             })
-        }        
+        }
+        else if(url.parse(req.url).pathname==="/submit"){
+            console.log(parsedUrl.query);
+            res.end();
+        }
+        
+        // else if(parsedUrl.pathname === "/formSubmit"){
+        //     let parsedObj = parsedUrl.query
+        //     fs.readFile("users.json", "utf-8", (err,data) => {
+                
+        //     })
+        // }       
     })
 
     server.listen(port,()=>{
-        console.log("Server is learning",port);
+        console.log("Server is listening",port);
     })
 }
 
