@@ -11,8 +11,10 @@ mongoose.connect(mongoURL)
 })
 
 const app = express()
+app.use(express.json());
 
 const userSchema = new mongoose.Schema({
+    id: Number,
     name: String,
     dep: String
 })
@@ -35,8 +37,49 @@ app.get("/api/users/:id", async(req, res) => {
     }
 })
 
-app.post("/api/users/add", (req, res) => {
+app.post("/api/users/add", async (req, res) => {
+    try {
+        const userData = req.body;
+        const newUser  = new userModel(userData);
+        await newUser.save();
 
+        res.json({
+            "Status": "User  added successfully",
+            "User ": newUser
+        });
+    } catch (error) {
+        console.error("Error adding user:", error);
+        res.json({
+            "Status": "Error adding user"
+        });
+    }
+});
+
+app.patch("/api/users/update/:id", async (req, res) => {
+    const id = Number(req.params.id);
+    const updatedUserData = req.body;
+    const user = await userModel.findOne({id : id});
+
+    if (user) {
+        // Update only the fields that are present in updatedUser Data
+        if (updatedUserData.name !== undefined) {
+            user.name = updatedUserData.name;
+        }
+        if (updatedUserData.dep !== undefined) {
+            user.dep = updatedUserData.dep;
+        }
+        
+        await user.save();
+        res.json({ "Status": "User  updated successfully" });
+    } else {
+        res.json({ "Status": "User  not found" });
+    }
+});
+
+app.delete("/api/users/delete/:id", async (req, res) => {
+    let userId = Number(req.params.id)
+    await userModel.findOneAndDelete({id : userId})
+    res.send("User deleted Successfully")
 })
 
 app.listen(PORT, (req, res) => {
