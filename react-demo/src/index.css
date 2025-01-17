@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .text-glow {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(0, 153, 255, 0.5);
+} */
+
+@keyframes walk {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100vw); /* Move across the full viewport width */
+    }
+  }
+  
+  .animate-walk {
+    animation: walk 5s linear infinite; /* Adjust duration and timing as needed */
+  }

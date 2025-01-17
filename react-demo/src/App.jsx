@@ -1,24 +1,26 @@
-import { useState } from 'react'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './sections/Navbar';
+import Footer from './sections/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  //Function to increment count on click
-  const onClick = () => {
-    setCount(count + 1)
-  }
-
   return (
-    <div>
-      <div className='text-4xl font-bold flex justify-center items-center'>
-        Hello World
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-      <div className='flex justify-center items-center mt-4'>
-        <button className='bg-gray-200 px-4 py-1 rounded-md hover:bg-black hover:text-gray-300 duration-300' onClick={onClick}>Count : {count}</button>
-      </div>
-    </div>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
